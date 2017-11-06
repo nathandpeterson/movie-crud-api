@@ -6,10 +6,15 @@ function home (req, res, next) {
 
 function getAllMovies (req, res, next) {
   const data = models.getAllMovies()
-  console.log(data)
-  res.status(200).send({data})
+  res.status(200).json({data})
+}
+
+function getAllActors (req, res, next) {
+  models.getAllActors()
+  .then(data => res.json(data))
+  res.json(err)
 }
 
 
 
-module.exports = {home, getAllMovies}
+module.exports = {home, getAllMovies, getAllActors}
