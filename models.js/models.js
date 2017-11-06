@@ -1,4 +1,4 @@
-const knex = require('../db/db.js')
+const knex = require('knex')
 
 
 function getAllMovies(){
