@@ -1,0 +1,19 @@
+{
+  "name": "movie-crud-api",
+  "version": "1.0.0",
+  "description": "back-end api for movie-crud app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathandpeterson/movie-crud-api.git"
+  },
+  "author": "Nathan Daniel Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathandpeterson/movie-crud-api/issues"
+  },
+  "homepage": "https://github.com/nathandpeterson/movie-crud-api#readme"
+}
