@@ -16,5 +16,9 @@ function getAllActors(){
   return knex('actors')
 }
 
+function getOneActor(id){
+  return knex('actors').where({id: id}).first()
+}
 
-module.exports = {getOneMovie, getAllMovies, getAllActors}
+
+module.exports = {getOneMovie, getAllMovies, getAllActors, getOneActor}

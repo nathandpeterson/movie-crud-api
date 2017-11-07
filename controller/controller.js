@@ -5,13 +5,17 @@ function home (req, res, next) {
 }
 
 function getOneMovie(req, res, next) {
-  const data = models.getOneMovie(req.params.id)
-  res.status(200).json({data})
+  models.getOneMovie(req.params.id)
+  .then(result => {
+    res.status(200).json(result)
+  })
 }
 
 function getAllMovies (req, res, next) {
   const data = models.getAllMovies()
-  res.status(200).json({data})
+  .then(result => {
+    res.status(200).json(result)
+  })
 }
 
 function getAllActors (req, res, next) {
@@ -21,6 +25,11 @@ function getAllActors (req, res, next) {
   })
 }
 
+function getOneActor (req, res, next) {
+  models.getOneActor(req.params.id)
+  .then(result => res.status(200).json(result))
+}
 
 
-module.exports = {home, getOneMovie, getAllMovies, getAllActors}
+
+module.exports = {home, getOneMovie, getAllMovies, getAllActors, getOneActor}
