@@ -10,9 +10,10 @@ function getAllMovies (req, res, next) {
 }
 
 function getAllActors (req, res, next) {
-  models.getAllActors()
-  .then(data => res.json(data))
-  res.json(err)
+  const data = models.getAllActors()
+  .then(result => {
+    res.status(200).json(result)
+  })
 }
 
 
