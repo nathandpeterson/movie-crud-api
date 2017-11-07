@@ -5,7 +5,11 @@ const knex = require('../db/db.js')
 
 
 function getAllMovies(){
-  return ['Blade Runner', 'A Scanner Darkly', '2001: A Space Odyssey']
+  return knex('movies')
+}
+
+function getOneMovie(id){
+  return knex('movies').where({id: id}).first()
 }
 
 function getAllActors(){
@@ -13,4 +17,4 @@ function getAllActors(){
 }
 
 
-module.exports = {getAllMovies, getAllActors}
+module.exports = {getOneMovie, getAllMovies, getAllActors}

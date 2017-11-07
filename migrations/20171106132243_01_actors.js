@@ -2,7 +2,8 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('actors', table => {
   table.increments()
-  table.string('name').notNullable()
+  table.string('first_name').notNullable()
+  table.string('last_name').notNullable()
   table.timestamps(true, true)
   })
 }
