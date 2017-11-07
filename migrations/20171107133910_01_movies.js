@@ -1,12 +1,12 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('movies', table => {
-    table.increments()
+    table.increments().notNullable()
     table.string('title').notNullable()
     table.integer('year')
     table.string('plot')
     table.string('image_url')
-    table.decimal('rating', 2,1)
+    table.integer('rating')
     table.timestamps(true, true)
   })
 }
