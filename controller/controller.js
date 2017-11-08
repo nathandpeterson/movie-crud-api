@@ -18,6 +18,15 @@ function getAllMovies (req, res, next) {
   })
 }
 
+function createMovie(req, res, next) {
+  console.log('inside the controlller.............', req.body)
+  const response = models.createMovie(req.body)
+  .then(result => {
+    console.log('@!@!@!@!@!@!@@!!@', result)
+    res.status(201).json(result)
+  })
+}
+
 function getAllActors (req, res, next) {
   const data = models.getAllActors()
   .then(result => {
@@ -32,4 +41,4 @@ function getOneActor (req, res, next) {
 
 
 
-module.exports = {home, getOneMovie, getAllMovies, getAllActors, getOneActor}
+module.exports = {home, getOneMovie, getAllMovies, createMovie, getAllActors, getOneActor}

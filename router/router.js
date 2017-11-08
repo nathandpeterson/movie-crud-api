@@ -6,6 +6,7 @@ router.get('/', ctrl.home)
 router.get('/movies')
 router.get('/movies', ctrl.getAllMovies)
 router.get('/movies/:id', ctrl.getOneMovie)
+router.post('/movies', ctrl.createMovie)
 router.get('/actors', ctrl.getAllActors)
 router.get('/actors/:id', ctrl.getOneActor)
 
