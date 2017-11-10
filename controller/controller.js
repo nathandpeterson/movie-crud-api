@@ -19,7 +19,6 @@ function getAllMovies (req, res, next) {
 }
 
 function createMovie(req, res, next) {
-  //validate data here?
   const response = models.createMovie(req.body)
   .then(result => {
     res.status(201).json(result)
@@ -27,7 +26,6 @@ function createMovie(req, res, next) {
 }
 
 function updateMovie(req, res, next){
-  //validate?
   const response = models.updateMovie(req.params.id, req.body)
   .then(result => {
     res.status(201).json(result)
