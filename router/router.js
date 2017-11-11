@@ -9,7 +9,5 @@ router.get('/movies/:id', ctrl.getOneMovie)
 router.post('/movies', ctrl.createMovie)
 router.put('/movies/:id', ctrl.updateMovie)
 router.delete('/movies/:id', ctrl.destroyMovie)
-router.get('/actors', ctrl.getAllActors)
-router.get('/actors/:id', ctrl.getOneActor)
 
 module.exports = router

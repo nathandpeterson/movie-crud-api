@@ -13,7 +13,6 @@ function getOneMovie(id){
 }
 
 function createMovie(data){
-  //validate data?
   return knex('movies').insert(data)
 }
 
@@ -29,13 +28,5 @@ function destroyMovie(id){
   return knex('movies').where({id:id}).del()
 }
 
-function getAllActors(){
-  return knex('actors')
-}
 
-function getOneActor(id){
-  return knex('actors').where({id: id}).first()
-}
-
-
-module.exports = {getOneMovie, getAllMovies, createMovie, destroyMovie, updateMovie, getAllActors, getOneActor}
+module.exports = {getOneMovie, getAllMovies, createMovie, destroyMovie, updateMovie}
